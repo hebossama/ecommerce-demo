@@ -139,7 +139,7 @@ body {
 
 @media (max-width: 60em) {
   .flex-group {
-    gap: var(--size-500);
+    gap: var(--size-400);
   }
 }
 
@@ -234,7 +234,7 @@ body {
 @media (max-width: 60em) {
   .header-panel {
     padding-block: var(--size-600);
-    padding-inline: var(--size-600);
+    padding-inline: var(--size-500);
   }
 
   .nav-list[data-desktop] {
@@ -388,7 +388,9 @@ body {
   .cart-popup {
     z-index: 1;
     top: 70px;
-    right: -16px;
+    right: 0px;
+    width: 22em;
+    height: 14em;
   }
 }
 
