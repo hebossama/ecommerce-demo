@@ -1,3 +1,25 @@
+// Mobile Menu Navigation
+
+const hamburger = document.querySelector(".hamburger");
+const closeMenu = document.querySelector(".close-menu");
+const mobileNavContainer = document.querySelector(".mobile-nav-container");
+const navList = document.getElementById("mobile-nav-list");
+
+hamburger.addEventListener("click", () => {
+    togglingNav()
+});
+
+closeMenu.addEventListener("click", () => {
+    togglingNav()
+});
+
+function togglingNav() {
+    hamburger.toggleAttribute("data-visible");
+    closeMenu.toggleAttribute("data-visible");
+    mobileNavContainer.toggleAttribute("data-visible");
+    navList.toggleAttribute("data-visible");
+}
+
 // Cart Popup/Dropdown Menu Toggle
 
 const viewCart = document.querySelector(".cart");
@@ -60,26 +82,44 @@ closeOverlayButton.addEventListener("click", () => {
 
 const right = document.querySelector(".right");
 const left = document.querySelector(".left");
+const rightOverlay = document.getElementById("right");
+const leftOverlay = document.getElementById("left");
 
 const arrayOfImages = ["img-1", "img-2", "img-3", "img-4"];
 
 right.addEventListener("click", () => {
+    next()
+});
+
+rightOverlay.addEventListener("click", () => {
+    next()
+});
+
+function next() {
     let currentIndex = arrayOfImages.indexOf(selectedImage);
     currentIndex = (currentIndex + 1) % arrayOfImages.length;
     selectedImage = arrayOfImages[currentIndex];
     displayImage(selectedImage);
     removeDatasetSelected();
     toggleDataSelected();
-});
+}
 
 left.addEventListener("click", () => {
+    prev()
+});
+
+leftOverlay.addEventListener("click", () => {
+    prev()
+});
+
+function prev() {
     let currentIndex = arrayOfImages.indexOf(selectedImage);
     currentIndex = (currentIndex - 1 + arrayOfImages.length) % arrayOfImages.length;
     selectedImage = arrayOfImages[currentIndex];
     displayImage(selectedImage);
     removeDatasetSelected();
     toggleDataSelected();
-});
+}
 
 function toggleDataSelected() {
     otherImageButtons.forEach(button => {
@@ -114,6 +154,7 @@ reduceQty.addEventListener("click", () => {
 const addToCart = document.querySelector(".add-to-cart");
 const cartContainer = document.querySelector(".cart-container");
 const itemThumbnail = document.getElementById("cart-thumbnail");
+const indicator = document.querySelector(".circle-indicator");
 
 const itemCartIcon = cartContainer.querySelector(".item-cart-icon");
 const itemCartName = cartContainer.querySelector(".item-cart-name");
@@ -132,6 +173,8 @@ addToCart.addEventListener("click", () => {
 });
 
 function setResource(name, price, qty) {
+    indicator.toggleAttribute("data-visible");
+    indicator.textContent = qty;
     const totalPrice = price * qty;
     const thumbnailSrc = itemThumbnail.getAttribute("src");
     itemCartIcon.querySelector("img").setAttribute("src", thumbnailSrc);
@@ -144,10 +187,11 @@ function setResource(name, price, qty) {
 deleteItem.addEventListener("click", () => {
     resetResource();
     cartContainer.setAttribute("data-empty", true);
+    indicator.toggleAttribute("data-visible");
 });
 
 function resetResource() {
-    const defaultImg = "images/favicon-322x32.png"
+    const defaultImg = "images/favicon-32x32.png"
     itemCartIcon.querySelector("img").setAttribute("src", defaultImg);
     itemCartName.textContent = "";
     itemCartPrice.textContent = "";

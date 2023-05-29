@@ -18,6 +18,10 @@
           <div class="header-panel | flex-group">
             <div class="left-end">
               <div class="flex-group">
+                <button class="hamburger">
+                  <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg"><path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" 
+                    fill="#69707D" fill-rule="evenodd"/></svg>
+                </button>
                 <h1 class="logo">
                   <a href="#">
                     <svg width="138" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -25,24 +29,29 @@
                     fill="#1D2026" fill-rule="nonzero"/></svg>
                   </a>
                 </h1>
-                <nav class="header-nav">
-                  <ul class="nav-list">
-                    <li><a href="#" class="text-neutral-400 fw-bold">Collection</a></li>
-                    <li><a href="#" class="text-neutral-400 fw-bold">Men</a></li>
-                    <li><a href="#" class="text-neutral-400 fw-bold">Women</a></li>
-                    <li><a href="#" class="text-neutral-400 fw-bold">About</a></li>
-                    <li><a href="#" class="text-neutral-400 fw-bold">Contact</a></li>
-                  </ul>
-                </nav>
+                <div class="nav-container">
+                  <nav class="header-nav">
+                    <ul class="nav-list" data-desktop>
+                      <li><a href="#" class="text-neutral-400 fw-bold">Collection</a></li>
+                      <li><a href="#" class="text-neutral-400 fw-bold">Men</a></li>
+                      <li><a href="#" class="text-neutral-400 fw-bold">Women</a></li>
+                      <li><a href="#" class="text-neutral-400 fw-bold">About</a></li>
+                      <li><a href="#" class="text-neutral-400 fw-bold">Contact</a></li>
+                    </ul>
+                  </nav>
+                </div>
               </div>
             </div>
             <div class="right-end">
               <div class="flex-group">
-                <button class="cart">
-                  <svg class="cart-icon" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" 
-                    fill="#69707D" fill-rule="nonzero"/></svg>
-                </button>
+                <div class="cart-button-group">
+                  <button class="cart">
+                    <svg class="cart-icon" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" 
+                      fill="#69707D" fill-rule="nonzero"/></svg>
+                  </button>
+                  <span class="circle-indicator | fw-bold"></span>
+                </div>
                 <div class="cart-popup">
                   <div class="title">
                     <p class="cart-title | text-neutral-100 fw-regular">Cart</p>
@@ -82,10 +91,31 @@
       </section>
     </header>
 
+    <div class="mobile-nav-container">
+      <nav class="header-nav">
+        <ul class="nav-list" id="mobile-nav-list">
+          <button class="close-menu">
+            <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" 
+              fill="#69707D" fill-rule="evenodd"/></svg>
+          </button>
+          <li class="margin-top"><a href="#" class="text-neutral-400 fw-bold">Collection</a></li>
+          <li><a href="#" class="text-neutral-400 fw-bold">Men</a></li>
+          <li><a href="#" class="text-neutral-400 fw-bold">Women</a></li>
+          <li><a href="#" class="text-neutral-400 fw-bold">About</a></li>
+          <li><a href="#" class="text-neutral-400 fw-bold">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
     <main>
       <div class="main-content-panel | container">
         <section class="item-preview">
           <div class="item-selected-group">
+            <button data-mobile class="left | switch-icon">
+              <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke-width="3" 
+                fill="none" fill-rule="evenodd"/>
+              </svg>
+            </button>
             <button class="main-image-button | image-focus-button">
               <picture class="main-image">
                 <source data-source="img-1" src="images/image-product-1.jpg">
@@ -94,6 +124,11 @@
                 <source data-source="img-4" src="images/image-product-4.jpg">
                 <img src="images/image-product-1.jpg" alt="">
               </picture>
+            </button>
+            <button data-mobile class="right | switch-icon">
+              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke-width="3" 
+                fill="none" fill-rule="evenodd"/>
+              </svg>
             </button>
           </div>
 
@@ -113,17 +148,19 @@
           </div>
         </section>
 
-        <section class="item-deescription-group">
+        <section class="item-description-group">
           <h2 class="company-name | text-primary-600 fw-bold">SNEAKERS COMPANY</h2>
           <h1 class="item-header | text-neutral-100 fw-bold">Fall Limited Edition Sneakers</h1>
           <p class="item-description | fw-bold">
             These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
           </p>
-          <div class="price">
-            <h3 class="current-price | text-neutral-100 fw-bold">$125.00</h3>
-            <p class="discount | text-primary-600 fw-bold">50%</p>
+          <div class="price-container">
+            <div class="price">
+              <h3 class="current-price | text-neutral-100 fw-bold">$125.00</h3>
+              <p class="discount | text-primary-600 fw-bold">50%</p>
+            </div>
+            <p class="previous-price | text-neutral-400 fw-bold">$250.00</p>
           </div>
-          <p class="previous-price | text-neutral-400 fw-bold">$250.00</p>
           <div class="button-group">
             <div class="quantity">
               <button class="reduce">
@@ -161,7 +198,7 @@
         </button>
 
         <div data-overlay class="item-selected-group">
-          <button class="left | switch-icon">
+          <button class="left | switch-icon" id="left">
             <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke-width="3" 
               fill="none" fill-rule="evenodd"/>
             </svg>
@@ -177,7 +214,7 @@
             </picture>
           </button>
 
-          <button class="right | switch-icon">
+          <button class="right | switch-icon" id="right">
             <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke-width="3" 
               fill="none" fill-rule="evenodd"/>
             </svg>
