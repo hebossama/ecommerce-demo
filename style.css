@@ -388,8 +388,8 @@ body {
   .cart-popup {
     z-index: 1;
     top: 70px;
-    right: 0px;
-    width: 22em;
+    right: -15px;
+    width: 21em;
     height: 14em;
   }
 }
