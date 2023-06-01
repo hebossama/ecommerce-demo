@@ -144,9 +144,8 @@ addQty.addEventListener("click", () => {
 });
 
 reduceQty.addEventListener("click", () => {
-    currentAmount--;
-    if (currentAmount < 0) {
-        currentAmount = 0;
+    if (currentAmount > 0) {
+        currentAmount--;
     }
     qtyAmount.textContent = currentAmount;
 });

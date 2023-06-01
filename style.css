@@ -110,6 +110,7 @@ body {
   font-family: var(--font-primary);
   font-size: var(--fs-paragrah);
   color: var(--clr-neutral-300);
+  overflow-x: hidden;
 }
 
 /* Utility Classes */
@@ -524,8 +525,12 @@ body {
   opacity: 0.7;
 }
 
+.item-selected-group {
+  display: grid;
+  place-items: center;
+}
+
 .main-image-button img {
-  width: 500px;
   border-radius: var(--size-300);
 }
 
@@ -687,23 +692,34 @@ body {
 }
 
 .quantity {
-  display: flex;
-  gap: var(--size-500);
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 3fr 1fr;
+  place-items: center;
   background-color: var(--clr-neutral-800);
   border-radius: var(--size-300);
 }
 
 .amount-display {
+  min-width: 5rem;
+  text-align: center;
+  padding-inline: var(--size-500);
   padding-block: var(--size-400);
-  padding-inline: var(--size-400);
 }
 
 .quantity button {
   border-style: none;
   background-color: transparent;
   cursor: pointer;
-  padding-block: var(--size-200);
-  padding-inline: var(--size-300);
+  padding-block: var(--size-400);
+}
+
+.quantity .reduce {
+  padding-left: var(--size-400);
+}
+
+.quantity .add {
+  padding-right: var(--size-400);
 }
 
 .quantity svg {
@@ -761,9 +777,12 @@ body {
   }
 
   .quantity {
-    flex: 1;
-    justify-content: center;
-    gap: 6rem;
+    flex: 100%;
+  }
+
+  .quantity button {
+    padding-inline: var(--size-500);
+    padding-block: var(--size-400);
   }
 
   .add-to-cart {
