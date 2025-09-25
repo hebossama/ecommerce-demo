@@ -3,45 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Shop</title>
+  <title>Digital World Shop</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Header -->
   <header>
     <nav class="navbar">
-      <div class="logo">AI Shop</div>
+      <div class="logo">Digital World Shop</div>
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('products')">Products</a></li>
+        <li><a href="#" onclick="showSection('cart')">Cart 🛒</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <h1>Discover AI Inspired Products</h1>
+  <section id="home" class="hero">
+    <h1>Discover AI Inspired Products in Digital World Shop</h1>
     <p>Smart. Simple. Affordable.</p>
   </section>
 
   <!-- Products Section -->
   <main>
-    <section class="products">
+    <section id="products" class="products hidden">
       <h2>Our Products</h2>
-      <div class="product-grid" id="product-list">
-        <!-- Products will load here from products.json -->
-      </div>
+      <div class="product-grid" id="product-list"></div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="cart-page hidden">
+      <h2>Your Shopping Cart</h2>
+      <div id="cart-items"></div>
+      <div id="cart-total"></div>
+      <button id="checkout-btn">Place Order</button>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 AI Shop. Built for demo purposes.</p>
+    <p>&copy; 2025 Digital World Shop. Built for you.</p>
   </footer>
 
   <script src="main.js"></script>
 </body>
 </html>
-
