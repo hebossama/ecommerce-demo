@@ -1,279 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sneakers | Fall Limited Edition Sneakers</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" src="main.js" defer></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">AI Shop</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <body>
-    <header>
-      <section class="main-header">
-        <div class="header-container">
-          <div class="header-panel flex-group">
-            <div class="left-end">
-              <div class="flex-group">
-                <button class="hamburger">
-                  <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
-                      fill="#69707D"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </button>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Discover AI Inspired Products</h1>
+    <p>Smart. Simple. Affordable.</p>
+  </section>
 
-                <h1 class="logo">
-                  <a href="#">
-                    <svg width="138" height="20" xmlns="http://www.w3.org/2000/svg">
-                      <!-- SVG path omitted for brevity -->
-                    </svg>
-                  </a>
-                </h1>
-
-                <div class="nav-container">
-                  <nav class="header-nav">
-                    <ul class="nav-list" data-desktop>
-                      <li><a href="#" class="text-neutral-400 fw-bold">Collection</a></li>
-                      <li><a href="#" class="text-neutral-400 fw-bold">Men</a></li>
-                      <li><a href="#" class="text-neutral-400 fw-bold">Women</a></li>
-                      <li><a href="#" class="text-neutral-400 fw-bold">About</a></li>
-                      <li><a href="#" class="text-neutral-400 fw-bold">Contact</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-
-            <div class="right-end">
-              <div class="flex-group">
-                <div class="cart-button-group">
-                  <button class="cart">
-                    <svg class="cart-icon" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
-                      <!-- Cart SVG path omitted for brevity -->
-                    </svg>
-                  </button>
-                  <span class="circle-indicator fw-bold"></span>
-                </div>
-
-                <div class="cart-popup">
-                  <div class="title">
-                    <p class="cart-title text-neutral-100 fw-regular">Cart</p>
-                  </div>
-                  <div class="cart-container" data-empty="true">
-                    <p class="empty">Your cart is empty.</p>
-                    <div class="items">
-                      <picture class="item-cart-icon">
-                        <source data-item="Fall Limited Edition Sneakers" src="images/image-product-1-thumbnail.jpg">
-                        <img src="images/favicon-32x32.png" alt="Product thumbnail">
-                      </picture>
-                      <div class="item-cart-description">
-                        <p class="item-cart-name"></p>
-                        <p class="item-cart-price">
-                          <span class="item-price-with-qty"></span>
-                          <span class="total-price text-neutral-100 fw-bold"></span>
-                        </p>
-                      </div>
-                      <button class="delete">
-                        <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg">
-                          <!-- Delete SVG path omitted for brevity -->
-                        </svg>
-                      </button>
-                    </div>
-                    <button class="checkout text-neutral-900">Checkout</button>
-                  </div>
-                </div>
-
-                <a href="#">
-                  <img src="images/image-avatar.png" alt="User avatar" class="avatar" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </header>
-
-    <div class="mobile-nav-container">
-      <nav class="header-nav">
-        <ul class="nav-list" id="mobile-nav-list">
-          <button class="close-menu">
-            <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
-                fill="#69707D"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-          <li class="margin-top"><a href="#" class="text-neutral-400 fw-bold">Collection</a></li>
-          <li><a href="#" class="text-neutral-400 fw-bold">Men</a></li>
-          <li><a href="#" class="text-neutral-400 fw-bold">Women</a></li>
-          <li><a href="#" class="text-neutral-400 fw-bold">About</a></li>
-          <li><a href="#" class="text-neutral-400 fw-bold">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <main>
-      <!-- Dynamic Products Section -->
-      <section class="dynamic-products container">
-        <h2 class="fw-bold">Our Products</h2>
-        <div id="products"></div>
-      </section>
-
-      <!-- Featured Product Section -->
-      <div class="main-content-panel container">
-        <section class="item-preview">
-          <div class="item-selected-group">
-            <button data-mobile class="left switch-icon">
-              <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1 3 9l8 8" stroke-width="3" fill="none" fill-rule="evenodd" />
-              </svg>
-            </button>
-
-            <button class="main-image-button image-focus-button">
-              <picture class="main-image">
-                <source data-source="img-1" src="images/image-product-1.jpg">
-                <source data-source="img-2" src="images/image-product-2.jpg">
-                <source data-source="img-3" src="images/image-product-3.jpg">
-                <source data-source="img-4" src="images/image-product-4.jpg">
-                <img src="images/image-product-1.jpg" alt="Fall Limited Edition Sneakers">
-              </picture>
-            </button>
-
-            <button data-mobile class="right switch-icon">
-              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
-                <path d="m2 1 8 8-8 8" stroke-width="3" fill="none" fill-rule="evenodd" />
-              </svg>
-            </button>
-          </div>
-
-          <div class="item-images-group">
-            <button class="other-image-button image-focus-button" data-selected data-source="img-1">
-              <img id="cart-thumbnail" src="images/image-product-1-thumbnail.jpg" alt="Thumbnail 1">
-            </button>
-            <button class="other-image-button image-focus-button" data-source="img-2">
-              <img src="images/image-product-2-thumbnail.jpg" alt="Thumbnail 2">
-            </button>
-            <button class="other-image-button image-focus-button" data-source="img-3">
-              <img src="images/image-product-3-thumbnail.jpg" alt="Thumbnail 3">
-            </button>
-            <button class="other-image-button image-focus-button" data-source="img-4">
-              <img src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 4">
-            </button>
-          </div>
-        </section>
-
-        <section class="item-description-group">
-          <h2 class="company-name text-primary-600 fw-bold">SNEAKERS COMPANY</h2>
-          <h1 class="item-header text-neutral-100 fw-bold">Fall Limited Edition Sneakers</h1>
-          <p class="item-description fw-bold">
-            These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
-          </p>
-
-          <div class="price-container">
-            <div class="price">
-              <h3 class="current-price text-neutral-100 fw-bold">$125.00</h3>
-              <p class="discount text-primary-600 fw-bold">50%</p>
-            </div>
-            <p class="previous-price text-neutral-400 fw-bold">$250.00</p>
-          </div>
-
-          <div class="button-group">
-            <div class="quantity">
-              <button class="reduce">-</button>
-              <p class="amount-display text-neutral-100 fw-bold">0</p>
-              <button class="add">+</button>
-            </div>
-
-            <button class="add-to-cart" data-item="Fall Limited Edition Sneakers" data-price="125.00">
-              Add-To-Cart
-            </button>
-          </div>
-        </section>
+  <!-- Products Section -->
+  <main>
+    <section class="products">
+      <h2>Our Products</h2>
+      <div class="product-grid" id="product-list">
+        <!-- Products will load here from products.json -->
       </div>
-    </main>
+    </section>
+  </main>
 
-    <!-- Image Overlay Section -->
-    <div class="image-overlay">
-      <section class="item-preview">
-        <button class="close-overlay">X</button>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 AI Shop. Built for demo purposes.</p>
+  </footer>
 
-        <div data-overlay class="item-selected-group">
-          <button class="left switch-icon" id="left">&lt;</button>
-
-          <button data-overlay class="main-image-button image-focus-button">
-            <picture class="main-image image-focused">
-              <source data-source="img-1" src="images/image-product-1.jpg">
-              <source data-source="img-2" src="images/image-product-2.jpg">
-              <source data-source="img-3" src="images/image-product-3.jpg">
-              <source data-source="img-4" src="images/image-product-4.jpg">
-              <img src="images/image-product-1.jpg" alt="Fall Limited Edition Sneakers">
-            </picture>
-          </button>
-
-          <button class="right switch-icon" id="right">&gt;</button>
-        </div>
-
-        <div class="item-images-group" data-overlay>
-          <button class="other-image-button image-focus-button" data-selected data-source="img-1">
-            <img src="images/image-product-1-thumbnail.jpg" alt="Thumbnail 1">
-          </button>
-          <button class="other-image-button image-focus-button" data-source="img-2">
-            <img src="images/image-product-2-thumbnail.jpg" alt="Thumbnail 2">
-          </button>
-          <button class="other-image-button image-focus-button" data-source="img-3">
-            <img src="images/image-product-3-thumbnail.jpg" alt="Thumbnail 3">
-          </button>
-          <button class="other-image-button image-focus-button" data-source="img-4">
-            <img src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 4">
-          </button>
-        </div>
-      </section>
-    </div>
-
-    <footer></footer>
-
-    <!-- Inline JS moved here for demonstration -->
-    <script>
-      async function loadProducts() {
-        try {
-          const response = await fetch("products.json");
-          const products = await response.json();
-
-          const container = document.getElementById("products");
-          container.innerHTML = "";
-
-          products.forEach((prod) => {
-            const card = document.createElement("div");
-            card.className = "product-card";
-            card.innerHTML = `
-              <img src="${prod.image}" alt="${prod.title}">
-              <h3>${prod.title}</h3>
-              <p>$${prod.price.toFixed(2)}</p>
-              <button onclick="orderProduct('${prod.sku}', '${prod.title}', ${prod.price})">Buy</button>
-            `;
-            container.appendChild(card);
-          });
-        } catch (err) {
-          console.error("Error loading products:", err);
-        }
-      }
-
-      function orderProduct(sku, title, price) {
-        alert("Order placed for " + title + " (demo only)");
-      }
-
-      loadProducts();
-    </script>
-  </body>
+  <script src="main.js"></script>
+</body>
 </html>
+
