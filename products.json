@@ -1,26 +1,6 @@
 [
-  {
-    "sku": "SKU001",
-    "title": "AI T-Shirt",
-    "price": 19.99,
-    "image": "../images/11.jpg"
-  },
-  {
-    "sku": "SKU002",
-    "title": "Smart Mug",
-    "price": 12.50,
-    "image": "../images/12.jpg"
-  },
-  {
-    "sku": "SKU003",
-    "title": "E-Book: Intro to AI",
-    "price": 5.99,
-    "image": "../images/13.jpg"
-  },
-  {
-    "sku": "SKU004",
-    "title": "Wireless Mouse",
-    "price": 25.00,
-    "image": "../images/14.jpg"
-  }
+  { "id": 1, "name": "Tshirt", "price": 59.99, "image": "11.jpg" },
+  { "id": 2, "name": "Smart Coffe maker", "price": 39.99, "image": "12.jpg" },
+  { "id": 3, "name": "buy our e-book", "price": 0.99, "image": "13.jpg" },
+  { "id": 4, "name": "wirless mouse", "price": 29.99, "image": "14.jpg" }
 ]
