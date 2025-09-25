@@ -1,51 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digital World Shop</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Shop Demo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <nav class="navbar">
-      <div class="logo">Digital World Shop</div>
-      <ul class="nav-links">
-        <li><a href="#" onclick="showSection('home')">Home</a></li>
-        <li><a href="#" onclick="showSection('products')">Products</a></li>
-        <li><a href="#" onclick="showSection('cart')">Cart 🛒</a></li>
-      </ul>
+    <h1>AI Shop Demo</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart 🛒</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h1>Discover AI Inspired Products in Digital World Shop</h1>
-    <p>Smart. Simple. Affordable.</p>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Welcome to AI Shop</h2>
+      <p>Smart shopping powered by AI & automation</p>
+      <a href="#featured" class="btn">Shop Now</a>
+    </div>
   </section>
 
-  <!-- Products Section -->
-  <main>
-    <section id="products" class="products hidden">
-      <h2>Our Products</h2>
-      <div class="product-grid" id="product-list"></div>
-    </section>
+  <!-- Featured Products (Horizontal scroll bar) -->
+  <section id="featured">
+    <h2>Featured Products</h2>
+    <div class="featured-scroll" id="featured-products"></div>
+  </section>
 
-    <!-- Cart Section -->
-    <section id="cart" class="cart-page hidden">
-      <h2>Your Shopping Cart</h2>
-      <div id="cart-items"></div>
-      <div id="cart-total"></div>
-      <button id="checkout-btn">Place Order</button>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Digital World Shop. Built for you.</p>
-  </footer>
+  <!-- All Products Grid -->
+  <section id="all-products">
+    <h2>All Products</h2>
+    <div class="product-grid" id="product-list"></div>
+  </section>
 
   <script src="main.js"></script>
 </body>
 </html>
+
